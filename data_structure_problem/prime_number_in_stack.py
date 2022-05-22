@@ -26,6 +26,11 @@ class Stack:
             self.head = new_node
 
     def primes(self, n):
+        """
+        function for calculating prime number
+        :param n: last range of number
+        :return: prime number
+        """
         array = [i for i in range(2, n + 1)]
         p = 2
 

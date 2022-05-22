@@ -17,6 +17,11 @@ class Queue:
 
     # Function to add an element data in the Queue
     def enqueue(self, data):
+        """
+        function for inserting number in queue
+        :param data: inserted element
+        :return: perform enqueue operation
+        """
         if self.last is None:
             self.head = Node(data)
             self.last = self.head
@@ -26,7 +31,10 @@ class Queue:
             self.last = self.last.next
 
     def print_queue(self):
-
+        """
+        function for displaying Queue element
+        :return: list of item in queue
+        """
         print("queue elements are:")
         temp = self.head
         while temp is not None:
@@ -34,6 +42,11 @@ class Queue:
             temp = temp.next
 
     def primes(self, n):
+        """
+        function for checking prime number
+        :param n: last range of number
+        :return: prime numbers in that range
+        """
         array = [i for i in range(2, n + 1)]
         p = 2
 

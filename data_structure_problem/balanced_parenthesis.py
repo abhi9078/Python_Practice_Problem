@@ -10,13 +10,22 @@ class Stack:
 
     # Checks if stack is empty
     def is_empty(self):
-        if self.head == None:
+        """
+        function for checking stack is empty or not
+        :return: true or false
+        """
+        if self.head is None:
             return True
         else:
             return False
 
     def push(self, data):
-        if self.head == None:
+        """
+        function for inserting element in stack
+        :param data: inserting element
+        :return: desire operation
+        """
+        if self.head is None:
             self.head = Node(data)
 
         else:
@@ -25,6 +34,10 @@ class Stack:
             self.head = new_node
 
     def pop(self):
+        """
+        popping out top element from stack
+        :return: remove top element of stack
+        """
         if self.is_empty():
             return None
 
@@ -35,6 +48,11 @@ class Stack:
             return popped_node.data
 
     def balanced_paren(self, input_string):
+        """
+        function for performing balanced parenthesis program using stack
+        :param input_string: input string from user
+        :return: balanced or unbalanced
+        """
         for c in input_string:
             if c == '(' or c == '{' or c == '[':
                 self.push(c)

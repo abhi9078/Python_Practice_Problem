@@ -1,4 +1,9 @@
 def primes(n):
+    """
+    function for checking prime number in a given range
+    :param n: last range of number
+    :return: prime numbers
+    """
     array = [i for i in range(2, n + 1)]
     p = 2
     pr = []

@@ -18,6 +18,11 @@ def primes(n):
 
 
 def anagram(an):
+    """
+    function for checking anagram number in prime number
+    :param an: a set of prime number in given range
+    :return: anagram numbers
+    """
     # initialize a list
     anagram_list = []
     for i in an:

@@ -28,12 +28,12 @@ class AddressBook(object):
                 data = json.load(my_address_book)
                 my_address_book.close()
             else:
-                my_address_book = open(self.filename, 'w')
+                my_address_book = open(self.filename, 'a')
                 data = {}
 
             contact = self.get_details_from_user()
             data[contact['Name']] = contact
-            my_address_book = open(self.filename, 'w')
+            my_address_book = open(self.filename, 'a')
             json.dump(data, my_address_book)
             my_address_book.close()
             print('Contact Added Successfully!')
@@ -126,7 +126,7 @@ class AddressBook(object):
             except Exception as e:
                 print('Error occurred. No such record found. Try Again!', e)
             finally:
-                my_address_book = open(self.filename, 'wb')
+                my_address_book = open(self.filename, 'a')
                 json.dump(data, my_address_book)
                 my_address_book.close()
         else:
@@ -135,7 +135,7 @@ class AddressBook(object):
 
 if __name__ == '__main__':
     myBook = AddressBook()
-    print("1 to Add contact, \n2 to display contact"\
+    print("1 to Add contact, \n2 to display contact"
           "\n3 For Searching a Contact \n4. For Modifying a Contact")
     while True:
         choice = int(input('Enter your choice: '))
