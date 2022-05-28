@@ -1,0 +1,18 @@
+{
+  "tata": {
+    "Stock_Name": "tata",
+    "Stock_price": 500,
+    "Stock_quantity": 12
+  }
+}{
+  "tata": {
+    "Stock_Name": "tata",
+    "Stock_price": 500,
+    "Stock_quantity": 12
+  },
+  "google": {
+    "Stock_Name": "google",
+    "Stock_price": 10000,
+    "Stock_quantity": 1
+  }
+}
